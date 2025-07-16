@@ -17,7 +17,10 @@ This is my personal portfolio website built using **HTML** and **CSS**. It showc
 - Custom styling and transitions
 
 ## 📸 Preview
-![Portfolio Screenshot](screenshot.png)
+<img width="1902" height="1068" alt="image" src="https://github.com/user-attachments/assets/cb5a36aa-4786-4b96-b1bc-1e652e61f95c" />
+<img width="1920" height="1199" alt="image" src="https://github.com/user-attachments/assets/42456657-66a0-443d-9b65-a6d0185a24a3" />
+
+
 
 ## 🔗 Live Demo
 [Visit my Portfolio](https://yourusername.github.io/portfolio/) *(replace with your GitHub Pages link)*
