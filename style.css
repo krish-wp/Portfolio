@@ -1,0 +1,180 @@
+
+    section, img, a, button {
+  transition: all 0.3s ease;
+}
+
+
+    .glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+    html {
+    scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM sans', sans-serif;
+      margin: 30px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    header, footer {
+      background:  	#2C3E50;
+       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 10px;
+        border-radius: 5px;
+    }
+    section {
+  transition: box-shadow 0.5s ease, background 0.5s ease;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9)); /* soft gradient look */
+  padding: 25px;
+  margin-top: 20px;
+
+  border-radius: 12px;
+  backdrop-filter: blur(6px); /* for glassy effect if background is transparent */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+section:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+    table {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    td, th {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: left;
+    }
+    form input, textarea, select {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 100%;
+    }
+    .experience-item {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  margin-bottom: 20px;
+  background: 	#FAFAFA;
+  padding: 10px;
+  border-radius: 10px;
+} 
+.experience-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #3a78c2;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  padding: 5px;
+  display: inline-block;  
+  transition: transform 0.3s;
+}
+
+a:hover {
+    transform: scale(1.10);
+  text-decoration: underline;
+  color: #ddd;
+    
+}
+
+
+
+#links .experience-item {
+  background-color: #B7AEEB;
+  margin-bottom: 40px;
+  
+
+}
+h1 {
+  text-align: center;
+  color: 	#2E2E2E;
+  margin-bottom: -5px;
+
+  
+}
+h2 {
+  text-align: center;
+  color: 	#2E2E2E;
+
+  padding-bottom: 5px;
+}
+
+h3 {
+  margin-top: 20px;
+  color: 	#2E2E2E;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+img{
+
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+
+::selection {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+:root {
+  --primary-color: #1F2937;     /* Dark navy blue */
+  --accent-color: #4A90E2;      /* Soft blue for highlights */
+  --bg-color: #F8FAFC;          /* Soft light background */
+  --card-color: #FFFFFF;        /* Pure white cards */
+  --text-color: #111827;        /* Very dark gray for premium text */
+}
+
+
+
+
+
+
+    
