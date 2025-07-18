@@ -6,6 +6,7 @@
 
 
     <link rel="icon" href="https://fav.farm/✌️" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,27 +18,42 @@
   </style>
 </head>
 
+
+
+
 <body>
 
   <!-- Header -->
   <header class="glass">
-    <h1 >Welcome to Krish's Porfolio</h1>
-    <nav style="text-align: center;">
-        
-      <a href="#about" style="color: rgb(0, 0, 0);">About</a> 
-            <a href="#projects" style="color: rgb(0, 0, 0);">Projects</a> 
-      <a href="#experience" style="color: rgb(0, 0, 0);">Experiences</a>
-      <a href="#links" style="color: rgb(13, 13, 13);">Profiles</a>
-      <a href="#contact" style="color: rgb(14, 14, 14);">Contact</a>
-      
-    </nav>
+  <h1 >Welcome to Krish's Porfolio</h1>
+
+
+   <label for="theme-switch" class="theme-toggle">
+    <input type="checkbox" id="theme-switch">
+    <span class="slider">
+      <span class="sun">☀️</span>
+      <span class="moon">🌙</span>
+    </span>
+  </label>
+  
+
+
+    <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experiences</a>
+    <a href="#links">Profiles</a>
+    <a href="#contact">Contact</a>
+  </nav>
   </header>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" class="card" >
+    <div class="container">
     <h2>About Me</h2>
     <p>I’m Krish, a B.Tech ICT student at DAIICT. I'm a passionate problem solver with a strong foundation in DSA and currently expanding my skills in web development.</p>
     <img src="HD-wallpaper-anonymous-human-hood-dark-black-thumbnail.jpg" alt="My Photo" width="100" height="150" style="width: 100px; height: 150px; border-radius: 15px; max-width: 100%;">
+      </div>
   </section>
 
   <!-- Projects Section -->
@@ -160,5 +176,11 @@
     <p>© 2025 Krish Dhola  Built with pure HTML & CSS  during learning</p>
   </footer>
 
+  
+
+  
+  <canvas id="particles"></canvas> <!--partical that moves with mopuse cursor-->
+<script src="script.js"></script>
 </body>
+
 </html>
