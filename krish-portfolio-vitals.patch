@@ -1,0 +1,125 @@
+diff --git a/index.html b/index.html
+index a1b2c3d..e4f5c67 100644
+--- a/index.html
++++ b/index.html
+@@ -5,12 +5,32 @@
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Krish – Portfolio</title>
+-  <link rel="stylesheet" href="style.css" />
++  <meta name="description" content="Krish — Full-stack developer, open-source contributor, final-year DAIICT.">
++  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
++  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"></noscript>
++
++  <!-- Critical above-the-fold styles -->
++  <style>
++    :root {
++      --bg: #0d0d0d;
++      --fg: #ffffff;
++    }
++    [data-theme="light"] {
++      --bg: #ffffff;
++      --fg: #0d0d0d;
++    }
++    body { margin: 0; font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--fg); scroll-behavior: smooth; }
++    header { height: 100vh; display: flex; align-items: center; justify-content: center; }
++    .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(8px); border-radius: 12px; padding: 1.5rem; }
++  </style>
++
++  <!-- Main stylesheet deferred -->
++  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+ </head>
+ 
+-<body>
++<body data-theme="dark">
+   <!-- Navbar -->
+-  <nav>
++  <nav aria-label="Main">
+     <ul>
+       <li><a href="#about">About</a></li>
+       <li><a href="#skills">Skills</a></li>
+@@ -20,7 +40,7 @@
+   </nav>
+ 
+   <!-- Hero -->
+-  <header>
++  <header id="hero">
+     <h1>Hi, I'm Krish</h1>
+     <p>Full-stack developer & open-source enthusiast</p>
+     <a href="#projects" class="cta">View My Work</a>
+@@ -35,6 +55,11 @@
+   <section id="skills">
+     <h2>Skills</h2>
+     <table>
++      <caption class="sr-only">Skill proficiency overview</caption>
+       <tr><th>Technology</th><th>Level</th></tr>
+       <tr><td>HTML/CSS</td><td>Expert</td></tr>
+       <tr><td>JavaScript</td><td>Advanced</td></tr>
+@@ -45,6 +70,9 @@
+   <!-- Projects -->
+   <section id="projects">
+     <h2>Projects</h2>
++    <div id="repo-card" class="glass">Loading latest repo…</div>
++
++    <!-- Existing project cards -->
+     <div class="project-card">
+       <h3>Portfolio Website</h3>
+       <p>Responsive HTML/CSS portfolio.</p>
+@@ -53,7 +81,19 @@
+ 
+   <!-- Contact -->
+   <section id="contact">
+-    <h2>Contact</h2>
+-    <p>Email me at <a href="mailto:krish@example.com">krish@example.com</a></p>
++    <h2>Get in Touch</h2>
++    <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
++      <label>Your Name <input name="name" required></label>
++      <label>Email <input type="email" name="_replyto" required></label>
++      <label>Message <textarea name="message" required></textarea></label>
++      <button type="submit">Send Message</button>
++    </form>
+   </section>
++
++  <!-- Dark-mode toggle -->
++  <button onclick="toggleTheme()" aria-label="Toggle dark mode" style="position:fixed;top:1rem;right:1rem;z-index:1000;">🌗</button>
++  <script>
++    const toggleTheme = () => document.documentElement.dataset.theme =
++      document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
++  </script>
+ </body>
+ </html>
+diff --git a/style.css b/style.css
+index 1234567..abcdefg 100644
+--- a/style.css
++++ b/style.css
+@@ -1,8 +1,22 @@
+-/* existing file */
++/* Inherit critical variables from <style> block */
++
++/* Smooth scroll offset */
++section { scroll-margin-top: 5rem; }
++
++/* Accessible focus ring */
++a:focus-visible, button:focus-visible {
++  outline: 2px solid #ff6b6b;
++  outline-offset: 2px;
++}
++
++/* Larger tap targets */
++button, .cta {
++  min-height: 48px;
++  min-width: 48px;
++}
++
++/* Glassmorphism hover */
++.glass:hover {
++  background: rgba(255,255,255,0.12);
++}
++
++/* Utility */
++.sr-only {
++  position: absolute;
++  width: 1px;
++  height: 1px;
++  overflow: hidden;
++}
